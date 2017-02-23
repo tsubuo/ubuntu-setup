@@ -52,4 +52,17 @@ pyenv global anaconda3-4.2.0
 conda create -y -n kaggle python=3.5
 pyenv global system
 
+cat << EOF > /usr/share/X11/xorg.conf.d/20-natural-scrolling.conf
+Section "InputClass"
+        Identifier "Natural Scrolling"
+        MatchIsPointer "on"
+        MatchDevicePath "/dev/input/event*"
+        Option "VertScrollDelta" "-1"
+        Option "HorizScrollDelta" "-1"
+        Option "DialDelta" "-1"
+EndSection
+EOF 
+
+#xinput set-prop {device id} {property number} -1 -1 -1
+
 sudo reboot
