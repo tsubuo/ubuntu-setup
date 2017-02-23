@@ -63,7 +63,7 @@ Section "InputClass"
 EndSection
 EOF 
 
-sudo apt -y install zsh tmux
+sudo apt -y install zsh tmux ctags
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
