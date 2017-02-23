@@ -63,6 +63,12 @@ Section "InputClass"
 EndSection
 EOF 
 
+sudo apt -y install zsh tmux
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+sudo chsh -s /usr/bin/zsh
+
 #xinput set-prop {device id} {property number} -1 -1 -1
 
 sudo reboot
