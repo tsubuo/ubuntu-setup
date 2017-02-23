@@ -1,3 +1,5 @@
+#!/bin/sh
+
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
 sudo apt-get -y install nvidia-367
