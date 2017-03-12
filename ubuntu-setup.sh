@@ -18,18 +18,18 @@ sudo apt -y install vim-gnome
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
 cat 7fa2af80.pub | sudo apt-key add -
 
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 sudo apt update
 
 sudo apt -y install linux-generic
-sudo apt -y install cuda nvidia-367 --reinstall
+sudo apt -y install cuda nvidia-375 --reinstall
 #sudo reboot
 
 #sudo apt remove linux-virtual
 sudo apt autoremove
 
-rm 7fa2af80.pub cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+rm 7fa2af80.pub cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 
 echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
 echo 'export PATH=/usr/local/cuda-8.0/bin:${PATH}' >> ~/.bashrc
